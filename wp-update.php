@@ -72,8 +72,14 @@ else
 	// capabilities to upgrade WordPress. This will do the trick ...
 	class Dummy_Admin_User
 	{
-		// This fella' has a "can do" attitude
-		public function has_cap() { return true; }
+                // This fella' has a "can do" attitude ...
+                public function has_cap() { return true; }
+                // ... and he exists
+                public function exists() { return true; }
+                // He has properties ...
+                public function has_prop() { return true; }
+                // ... and he can be retrieved
+                public function get() { return $this; }
 	}
 
 	// Overrides default in `wp-includes/pluggable.php`
